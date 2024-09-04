@@ -1,0 +1,107 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1000px;
+  position: relative;
+}
+
+.home-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #2575fc;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #1b5fc1;
+  transform: scale(1.05);
+}
+
+form .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form .col {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px;
+}
+
+form .title {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+form .inputBox {
+  margin-bottom: 15px;
+}
+
+form .inputBox span {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+form .inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+form .flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .flex .inputBox {
+  flex: 1;
+  margin-right: 10px;
+}
+
+form .flex .inputBox:last-child {
+  margin-right: 0;
+}
+
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #5a0db3 0%, #1b5fc1 100%);
+  transform: scale(1.02);
+}

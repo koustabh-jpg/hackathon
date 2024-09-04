@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>alumini</title>
+        <link rel="stylesheet" href="indexStu.css">
+        <script src="https://kit.fontawesome.com/92c51c5ce0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="banner">
+
+            <div class="form-box">
+                <h1 id="title">Sign Up</h1>
+                <form >
+                    <div class="input_grp">
+                        <div class="input-field" id="nameField">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="username" placeholder="name">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="mail" placeholder="email">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="pass" placeholder="password">
+                        </div>
+                        <p>lost password <a href="#">click here</a></p>
+                    </div>
+                    <div class="btn-field" onclick="func()">
+                        <button  type="button"  id="signupbtn">Sign up </button>
+                        <button  type="button"  id="signinbtn" class="disable">Log in</button> 
+                    </div>
+                </form>
+            </div>
+
+
+
+
+       
+        </div>
+        
+        <script>
+            var user=document.getElementById("username");
+
+            let signupbtn =document.getElementById("signupbtn");
+            let siginbtn =document.getElementById("signinbtn");
+            let nameField =document.getElementById("nameField");
+            let title =document.getElementById("title");
+            const email = document.getElementsByClassName('mail');
+           
+            function func(){
+                var mail= document.getElementById("mail").value;
+                var password=document.getElementById("pass").value;
+                if(mail!='' && password !='' ){
+                    alert("success full !")
+                    window.location.assign("student.html")
+                }
+                }
+
+            signinbtn.onclick= function()
+            {
+                nameField.style.maxHeight ="0";
+                title.innerHTML = "Sign In";
+                signupbtn.classList.add("disable");
+                signinbtn.classList.remove("disable")
+            }
+            signupbtn.onclick= function()
+            {
+                nameField.style.maxHeight ="60";
+                title.innerHTML = "Sign Up";
+                signinbtn.classList.add("disable");
+                signupbtn.classList.remove("disable")
+            }
+
+        </script>
+    </body>     
+</html>

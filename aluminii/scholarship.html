@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Scholarship Funds</title>
+    <link rel="stylesheet" href="scholarship.css">
+</head>
+<body>
+    <header>
+        <a onclick="func()" href="#" id="homeButton">Home</a>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scholarship Funds</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#types">Types of Scholarships</a></li>
+                <li><a href="#donate">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h2>Introduction</h2>
+        <p>Scholarships are financial aids provided to students to support their education.<br> They come in various forms to cater to different needs and goals.<br> Explore the types below to learn more about how you can contribute.</p>
+    </section>
+
+    <section id="types">
+        <h2>Types of Scholarships</h2>
+        <ul>
+            <li>
+                <h3>Merit-Based Scholarships</h3>
+                <p>Awarded based on academic achievements, extracurricular activities, or other talents.</p>
+                <button class="donateButton" data-type="merit">Donate to Merit-Based Scholarships</button>
+            </li>
+            <li>
+                <h3>Need-Based Scholarships</h3>
+                <p>Provided to students based on their financial need.</p>
+                <button class="donateButton" data-type="need">Donate to Need-Based Scholarships</button>
+            </li>
+            <li>
+                <h3>Minority Scholarships</h3>
+                <p>Designed to support students from underrepresented groups.</p>
+                <button class="donateButton" data-type="minority">Donate to Minority Scholarships</button>
+            </li>
+            <li>
+                <h3>Disability Scholarships</h3>
+                <p>For students with disabilities or chronic illnesses.</p>
+                <button class="donateButton" data-type="disability">Donate to Disability Scholarships</button>
+            </li>
+            <li>
+                <h3>Athletic Scholarships</h3>
+                <p>Awarded based on athletic talent and performance.</p>
+                <button class="donateButton" data-type="athletic">Donate to Athletic Scholarships</button>
+            </li>
+        </ul>
+    </section>
+
+    <section id="donate">
+        <h2>General Donation</h2>
+        <p>Your donation helps support students in need. Click the button below to make a contribution.</p>
+        <button id="donateGeneralButton">Donate Now</button>
+    </section>
+
+
+    <script src="scholarship.js"></script>
+    <script>
+        function func(){
+                    window.location.assign("alumini.html")
+                }
+    </script>
+</body>
+</html>

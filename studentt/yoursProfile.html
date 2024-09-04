@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>Profile Form</title>
+    <link rel="stylesheet" href="yoursProfile.css">
+</head>
+<body>
+
+
+
+
+    <div class="navbar" id="navb">
+        <img src="../images/logo-removebg-preview.png" class="logo">
+        
+
+        <ul>
+        
+            <li><a onclick="func3()" href="#">Home</a></li>
+            <li><a href="#">Events <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown"> 
+                    <ul>
+                        <li><a  onclick="func1()" href="#">Upcoming </a></li>                            
+                        <li><a  onclick="func2()" href="#">Registration </a></li>                            
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Profiles </a></li>
+            <li><a href="#">Alumni</a></li>
+            
+        </ul>
+        
+    <div class="form-container" id="form-container">
+        <h1>Create Your Profile</h1>
+        <form id="profile-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" required></textarea>
+
+            <label for="profile-picture">Profile Picture:</label>
+            <input type="file" id="profile-picture" name="profile-picture" accept="image/*" required>
+
+            <button type="submit">Save Profile</button>
+        </form>
+    </div>
+
+    <div id="profile-display" class="profile-display hidden">
+        <img id="display-picture" class="profile-picture" alt="Profile Picture">
+        <h2 id="display-name"></h2>
+        <p id="display-bio"></p>
+        <button id="edit-profile">Edit Profile</button>
+    </div>
+
+    <div>
+
+
+
+        <script>
+             function func3(){
+                    window.location.assign("student.html")
+                }
+             function func1(){
+                    window.location.assign("events.html")
+                }    
+
+            function func2(){
+                    window.location.assign("registration.html")
+                }
+        </script>
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const profileForm = document.getElementById('profile-form');
+    const profileDisplay = document.getElementById('profile-display');
+    const formContainer = document.getElementById('form-container');
+    const editProfileBtn = document.getElementById('edit-profile');
+
+    function loadProfile() {
+        const name = localStorage.getItem('name');
+        const bio = localStorage.getItem('bio');
+        const profilePicture = localStorage.getItem('profilePicture');
+
+        if (name && bio && profilePicture) {
+            document.getElementById('display-name').textContent = name;
+            document.getElementById('display-bio').textContent = bio;
+            document.getElementById('display-picture').src = profilePicture;
+
+            profileDisplay.classList.remove('hidden');
+            formContainer.classList.add('hidden');
+        } else {
+            profileDisplay.classList.add('hidden');
+            formContainer.classList.remove('hidden');
+        }
+    }
+
+    profileForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const bio = document.getElementById('bio').value;
+        const profilePictureInput = document.getElementById('profile-picture').files[0];
+
+        if (profilePictureInput) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const profilePictureDataUrl = e.target.result;
+
+                localStorage.setItem('name', name);
+                localStorage.setItem('bio', bio);
+                localStorage.setItem('profilePicture', profilePictureDataUrl);
+
+                loadProfile();
+            };
+            reader.readAsDataURL(profilePictureInput);
+        }
+    });
+
+    editProfileBtn.addEventListener('click', function() {
+        profileDisplay.classList.add('hidden');
+        formContainer.classList.remove('hidden');
+
+        document.getElementById('name').value = localStorage.getItem('name');
+        document.getElementById('bio').value = localStorage.getItem('bio');
+    });
+
+    loadProfile();
+});
+    </script>
+
+
+</body>
+</html>

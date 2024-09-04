@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>alumni</title>
+        <link rel="stylesheet" href="student.css">
+        <script src="https://kit.fontawesome.com/92c51c5ce0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="banner">
+            <div class="navbar" id="navb">
+                <img src="../images/logo-removebg-preview.png" class="logo">
+
+                <ul>
+                
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"> <i class="fa-regular fa-calendar-days"></i> Events <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a onclick="func1()" href="#">Upcoming </a></li>                            
+                                <li><a onclick="func4()" href="#">Registration </a></li>                            
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a onclick="func2()" href="#"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
+                    <li><a onclick="func3()" href="#"><i class="fa-regular fa-user"></i> My Profiles</a></li>
+                </ul>
+
+                <div class="content" id="cont">
+                    <h1>WELCOME STUDENT</h1>
+                    <p>Believe in your ability to learn, grow, and achieve greatness<br>your potential is limitless </p>
+                </div>
+
+            <div>
+
+        </div>
+        <script>
+             function func1(){
+                    window.location.assign("events.html")
+                }    
+            function func2(){
+                    window.location.assign("chat.html")
+                }
+            function func3(){
+                    window.location.assign("yoursProfile.html")
+                }
+            function func4(){
+                    window.location.assign("registration.html")
+                }
+  
+
+
+
+        </script>
+
+    </body>     
+</html>

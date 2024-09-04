@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>alumni</title>
+        <link rel="stylesheet" href="alumini.css">
+        <script src="https://kit.fontawesome.com/92c51c5ce0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="banner">
+
+
+
+            <div class="navbar" id="navb">
+                <img src="../images/logo-removebg-preview.png" class="logo">
+                
+
+                <ul>
+                
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Home </a></li>
+                    <li><a href="#"><i class="fa-regular fa-calendar-days"></i> Events <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a onclick="func1()" href="#">Upcoming </a></li>                            
+                                <li><a onclick="func6()" href="#">Registration </a></li>                            
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a onclick="func5()" href="#"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donation <i class="fas fa-caret-down"></i></a> 
+                        <div class="dropdown">
+                            <ul>
+                                <li><a onclick="func4()" href="#">Support the Institution </a></li>                            
+                                <li><a href="#">Scholarship Funds </a></li>                            
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a onclick="func3()" href="#"><i class="fa-regular fa-user"></i> My Profiles </a></li>
+                </ul>
+                <div class="content" id="cont">
+                    <h1>WELCOME ALUMNI</h1>
+                    <p>To our esteemed alumni, your achievements continue to inspire and strengthen our community.<br> Thank you for carrying forward the legacy of excellence and for being the pride of our institution.</p>
+                </div>
+
+            <div>
+
+
+        </div>
+        <script>
+             function func1(){
+                    window.location.assign("events.html")
+                }  
+                        function func2(){
+                    window.location.assign("chat.html")
+                }
+                function func3(){
+                    window.location.assign("yoursProfileAlu.html")
+                }
+                function func4(){
+                    window.location.assign("supportInstitute.html")
+                }
+                function func5(){
+                    window.location.assign("chatBox-server/index.html")
+                }
+                function func6(){
+                    window.location.assign("registration.html")
+                }
+
+                
+
+
+        </script>
+    </body>     
+</html>
